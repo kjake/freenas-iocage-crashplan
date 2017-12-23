@@ -1,0 +1,30 @@
+*** CrashPlanEngine	Fri Dec 22 13:10:55 2017
+--- ../crashplan-install/scripts/CrashPlanEngine	Thu Jul 27 15:57:39 2017
+***************
+*** 4,11 ****
+  # Init script for CrashPlanEngine
+  #############################################################
+
+- export LD_LIBRARY_PATH="/usr/local/share/crashplan/linux-sun-jre1.8.0/jre/lib/i386/jli"
+-
+  # Common functions used for startup operations
+  standard_startup() {
+
+--- 4,9 ----
+***************
+*** 82,88 ****
+  }
+
+  _findpid() {
+! 	/bin/ps -ewwo 'pid,command'| grep 'app=CrashPlanService' | grep -v grep | awk '{ print $1 }'
+  }
+
+  pushd "$(dirname "$0")" > /dev/null
+--- 80,86 ----
+  }
+
+  _findpid() {
+! 	/bin/ps -eo 'pid,cmd'| grep 'app=CrashPlanService' | grep -v grep | awk '{ print $1 }'
+  }
+
+  pushd "$(dirname "$0")" > /dev/null
