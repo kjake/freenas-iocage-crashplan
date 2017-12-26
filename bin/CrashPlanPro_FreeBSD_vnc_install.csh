@@ -19,7 +19,7 @@ BACKUP_PORT=${TCP_PORT_4242:-4242} \
 SERVICE_PORT=${TCP_PORT_4243:-4243} \
 VNC_CREDENTIALS=/root/.vnc_passwd \
 APP_NAME="CrashPlan ${CP_VERSION}" \
-if [[ -n $VNC_PASSWD ]]; then \
+if [[ -n $VNC_CREDENTIALS ]]; then \
   VNC_SECURITY="SecurityTypes TLSVnc,VncAuth -PasswordFile ${VNC_CREDENTIALS}" \
 else \
   VNC_SECURITY="SecurityTypes None" \
