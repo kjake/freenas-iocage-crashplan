@@ -13,7 +13,7 @@ The default VNC password is 'crashplan' - change it before installation at the v
 1. Decide where the persistant storage paths will go and update the paths within `crashplan_jail.sh` 
 1. Place all of the files with in the `bin` directory of this repo within the `crashplan/bin` directory before you run the main jail script.
 1. Put `crashplan_jail.sh` somewhere accessible on your FreeNAS system and run it.
-1. VNC will be available at http://[CRASHPLAN_IP]:4280/vnc.html?host=[CRASHPLAN_IP]&port=4280
+1. VNC will be available at http://[CRASHPLAN_IP]:4280/vnc_auto.html
 
 ### Notes of Interest
 1. Even if migrating from another system with data intact, you may still need to login to the application the first time you use this jail.
