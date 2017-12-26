@@ -72,11 +72,12 @@ echo '#\!/bin/sh \
 name="vnc" \
 rcvar=${name}_enable \
 command="/opt/vnc-session.sh" \
-stop_postcmd="vnc_poststop" \
-dbus_poststop() \
+stop_cmd="vnc_stop" \
+vnc_stop() \
 { \
     pkill Xvnc \
     pkill openbox \
+    pkill -f websockify \
 } \
 load_rc_config ${name} \
 run_rc_command "$1"' > /usr/local/etc/rc.d/vnc
