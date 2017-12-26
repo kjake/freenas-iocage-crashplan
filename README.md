@@ -24,7 +24,7 @@ _These persistent jail mounts are technically optional as the installation or OS
 
 #### Common Tasks
 - Configure VNC, but don't auto-start it:
-  - In _crashplan_jail.sh_, change vnc_enable to "NO" before running, or run `iocage exec crashplan sysrc -f /etc/rc.conf vnc_enable="NO"` to disable VNC auto-start at a later time.
+  - In _crashplan_jail.sh_, change `vnc_enable` to `"NO"` before running, or run `iocage exec crashplan sysrc -f /etc/rc.conf vnc_enable="NO"` to disable VNC auto-start at a later time.
   - VNC could then be manually started with: `iocage exec crashplan service vnc start`
 - Restart VNC:
   - Run `iocage exec crashplan service vnc restart`
