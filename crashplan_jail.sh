@@ -2,7 +2,7 @@
 
 iocage stop crashplan
 iocage destroy -f crashplan
-echo '{"pkgs":["bash","linux-c6-xorg-libs","linux-c6-gtk2","tigervnc","xauth","openbox","xorg-fonts-75dpi","xorg-fonts-100dpi","xsetroot","novnc","websockify","python","py27-numpy"]}' > /tmp/pkg.json
+echo '{"pkgs":["bash","linux_base-c7","linux-c7-xorg-libs","linux-c7-gtk2","linux-c7-nss","tigervnc","xauth","openbox","xorg-fonts-75dpi","xorg-fonts-100dpi","xsetroot","novnc","websockify","python","py27-numpy"]}' > /tmp/pkg.json
 iocage create --name "crashplan" -p /tmp/pkg.json -r 11.1-RELEASE ip4_addr="vnet0|[CRASHPLAN_IP]/24" vnet="on" allow_raw_sockets="1" defaultrouter="[DEFAULT_GW_IP]" boot="on" host_hostname="crashplan" mount_linprocfs="1" allow_mount_tmpfs="1"
 rm /tmp/pkg.json
 mkdir -p /mnt/[non_iocage_dset]/crashplan/cache
