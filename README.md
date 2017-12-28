@@ -25,6 +25,7 @@ If the Desktop application complains about not being able to connect to the back
    1. Variable "net.link.bridge.pfil_onlyip", Value "0", type "Sysctl".<sup>[2](#vnet)</sup>
    1. Variable "net.link.bridge.pfil_bridge", Value "0", type "Sysctl".<sup>[2](#vnet)</sup>
    1. Variable "net.link.bridge.pfil_member", Value "0", type "Sysctl".<sup>[2](#vnet)</sup>
+1. Reboot FreeNAS for these changes to take.
 1. Optional: Change the VNC password value located at the very bottom of _CrashPlanPro_FreeBSD_vnc_install.csh_.
 1. Decide where the persistant storage paths will go and update the paths within _crashplan_jail.sh_ 
 1. Update the IPs within _crashplan_jail.sh_ (CRASHPLAN_IP and DEFAULT_GW_IP)
