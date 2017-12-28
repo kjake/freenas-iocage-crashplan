@@ -14,10 +14,10 @@ The jail also mounts _portsnap/ports_ and _portsnap/db_ outside of the jail for 
 
 _These persistent jail mounts are technically optional as the installation or OS will create them as needed, but they will become part of the jail and lost if the jail is destroyed, resulting in a complete re-configure of CrashPlan on the next build of the jail. If you chose to not use persistent jail mounts, remove them from the crashplan_jail.sh before running and only mount your path(s) that you want to backup._
 
-#### Tip
+### Tip
 If the Desktop application complains about not being able to connect to the back end service, this is likely a DNS resolution issue - the Desktop app tries to connect to the hostname of the jail instead of the IP address. Register a DNS record at your router and things should work - an _/etc/hosts_ entry should too.
 
-#### Steps For Use
+### Steps For Use
 1. FreeNAS Changes, System->Tunables -> Add Tunable:
    1. Variable "linux_enable", Value "YES", type "rc.conf".<sup>[1](#linux_enable)</sup>
    1. Variable "ifconfig_bridge0", Value "addm [NET_INTERFACE_NAME] up", type "rc.conf".<sup>[2](#vnet)</sup>
@@ -33,7 +33,7 @@ If the Desktop application complains about not being able to connect to the back
 1. Put _crashplan_jail.sh_ somewhere accessible on your FreeNAS system and run it.
 1. VNC will be available at http://[CRASHPLAN_IP]:4280/vnc_auto.html
 
-#### Common Tasks
+### Common Tasks
 - Disable VNC auto-start:
   - Run `iocage exec crashplan sysrc -f /etc/rc.conf vnc_enable="NO"`
 - Manually start VNC: 
