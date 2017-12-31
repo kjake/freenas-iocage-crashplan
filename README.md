@@ -46,8 +46,8 @@ If the Desktop application complains about not being able to connect to the back
   - Run `iocage restart crashplan`
 - Change VNC password:
   - Run `iocage exec crashplan /opt/vncpasswd/vncpasswd.py -f "/root/.vnc_passwd" -e "NewPa55worD"`
-- Fix stuck backups / high CPU usage:
-  - Stop the Crashplan service (or jail) and empty the cache directory, then start Crashplan back up. This will re-sync what's on the file system with what's in the cloud (which will take a little time) and let Crashplan figure out what is or is not backed up and where to start again.
+- Stuck Backup / High CPU:
+  - Maybe lack of memory. Edit _bin/run.conf_ and modify the SRV_JAVA_OPTS to have a higher Xmx value, like 2048m instead of 1024m.
   
 ##### Footnotes
 ###### <a name="linux_enable">1</a>: https://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/linuxemu-lbc-install.html
