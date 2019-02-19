@@ -2,6 +2,8 @@
 
 ### I won't be updating this for CrashPlan 6+ because the system now heavily relies on Gnome/Linux components/libraries.  I have cancelled my plan with CrashPlan and shutdown my Jail even though 4.9 will continue to work; I don't want to support terrible software any longer.
 
+## I no longer use FreeNAS and will not be maintaining this
+
 Currently installs CrashPlan PRO 4.9.0 build 33 and TigerVNC with noVNC HTML5 viewer!
 
 For this to work, you need to enable Linux Binary Compatibility on your FreeNAS system, and reboot for the OS to load the linux compatibility kernel modules. This is also done within the Jail, but it won't work unless you do it on the main OS too. 
